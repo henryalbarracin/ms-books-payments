@@ -7,9 +7,9 @@ spring:
     #url: jdbc:h2:mem:testdb;Mode=MySQL
 
     #conexion a postgresql
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://host.docker.internal:5432/relatos}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://postgres-15.railway.internal:5432/railway}
     username: ${SPRING_DATASOURCE_USERNAME:postgres}
-    password: ${SPRING_DATASOURCE_PASSWORD:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:BB-B321dEgEBG426C12aa1c6eA4EAgEa}
   jpa:
     show-sql: true
     hibernate:
