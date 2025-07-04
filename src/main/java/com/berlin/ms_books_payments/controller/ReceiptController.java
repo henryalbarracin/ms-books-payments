@@ -3,10 +3,7 @@ package com.berlin.ms_books_payments.controller;
 import com.berlin.ms_books_payments.dto.BookOrderRequest;
 import com.berlin.ms_books_payments.dto.Receipt;
 import com.berlin.ms_books_payments.service.ReceiptService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -15,6 +12,11 @@ import lombok.RequiredArgsConstructor;
 public class ReceiptController {
 
     private final ReceiptService receiptService;
+
+    @GetMapping("/test")
+    public String test() {
+        return "test: respuesta de prueba de micro ms-books-payments";
+    }
 
     @PostMapping
     public Receipt generateReceipt(@RequestBody BookOrderRequest order) {
